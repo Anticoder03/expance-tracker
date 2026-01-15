@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Split Expense Tracker
+
+A modern, beautiful split expense tracker built with Next.js, Firebase, Tailwind CSS, and Font Awesome.
+
+## Features
+
+- 🎨 **Modern UI** - Beautiful glassmorphism design with vibrant gradients
+- 👥 **Group Management** - Create and manage expense groups
+- 💰 **Expense Tracking** - Track shared expenses with ease
+- 📊 **Balance Calculation** - Automatic balance calculations
+- 🔥 **Firebase Backend** - Real-time data synchronization
+- 📱 **Responsive Design** - Works perfectly on all devices
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with TypeScript
+- **Styling**: Tailwind CSS 4
+- **Icons**: Font Awesome
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Auth
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ installed
+- A Firebase project (create one at [Firebase Console](https://console.firebase.google.com/))
+
+### Installation
+
+1. **Clone the repository** (or navigate to the project directory)
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set up Firebase**:
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project or select an existing one
+   - Enable Firestore Database
+   - Enable Authentication (Email/Password)
+   - Go to Project Settings > General
+   - Scroll down to "Your apps" and click the web icon (</>)
+   - Register your app and copy the Firebase configuration
+
+4. **Configure environment variables**:
+   - Copy `.env.example` to `.env.local`:
+     ```bash
+     cp .env.example .env.local
+     ```
+   - Edit `.env.local` and replace the placeholder values with your Firebase configuration:
+     ```
+     NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+     NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+     NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+     NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+     NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+     ```
+
+5. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+6. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+```
+├── app/                    # Next.js app directory
+│   ├── page.tsx           # Landing page
+│   ├── layout.tsx         # Root layout
+│   └── globals.css        # Global styles
+├── lib/                   # Utility functions
+│   └── firebase.ts        # Firebase configuration
+├── types/                 # TypeScript type definitions
+│   └── index.ts          # App types
+├── public/               # Static assets
+└── .env.example          # Environment variables template
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Firebase Setup
 
-## Learn More
+### Firestore Collections
 
-To learn more about Next.js, take a look at the following resources:
+The app uses the following Firestore collections:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **users** - User profiles
+- **groups** - Expense groups
+- **expenses** - Individual expenses
+- **settlements** - Payment settlements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Security Rules
 
-## Deploy on Vercel
+Make sure to set up proper Firestore security rules in the Firebase Console.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Glassmorphism** - Modern glass-like UI elements
+- **Gradient Text** - Eye-catching gradient text effects
+- **Smooth Animations** - Floating elements and hover effects
+- **Custom Scrollbar** - Styled scrollbar matching the theme
+- **Responsive Layout** - Mobile-first design approach
+
+## Next Steps
+
+1. Set up Firebase configuration
+2. Create dashboard page for managing groups
+3. Implement expense tracking functionality
+4. Add user authentication
+5. Build settlement calculation logic
+
+## Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests.
+
+## License
+
+MIT License
