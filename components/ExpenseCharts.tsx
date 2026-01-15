@@ -173,7 +173,7 @@ export default function ExpenseCharts({ expenses, members }: ExpenseChartsProps)
                                     cx="50%"
                                     cy="50%"
                                     labelLine={false}
-                                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                                    label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`}
                                     outerRadius={100}
                                     fill="#8884d8"
                                     dataKey="value"
@@ -261,10 +261,10 @@ export default function ExpenseCharts({ expenses, members }: ExpenseChartsProps)
                                             <td className="text-right py-3 px-4 text-warning">${member.owed.toFixed(2)}</td>
                                             <td
                                                 className={`text-right py-3 px-4 font-bold ${netBalance > 0
-                                                        ? 'text-success'
-                                                        : netBalance < 0
-                                                            ? 'text-danger'
-                                                            : 'text-gray-400'
+                                                    ? 'text-success'
+                                                    : netBalance < 0
+                                                        ? 'text-danger'
+                                                        : 'text-gray-400'
                                                     }`}
                                             >
                                                 {netBalance > 0 ? '+' : ''}${netBalance.toFixed(2)}
