@@ -11,6 +11,42 @@ A modern, beautiful split expense tracker built with Next.js, Firebase, Tailwind
 - 🔥 **Firebase Backend** - Real-time data synchronization
 - 📱 **Responsive Design** - Works perfectly on all devices
 
+## Architecture & Design
+
+![1](./snapshots/1.png)
+
+![2](./snapshots/2.png)
+
+![3](./snapshots/3.png)
+
+![4](./snapshots/4.png)
+
+![5](./snapshots/5.png)
+
+![5-2](./snapshots/5-2.png)
+
+![6](./snapshots/6.png)
+
+![7](./snapshots/7.png)
+
+![8](./snapshots/8.png)
+
+![9](./snapshots/9.png)
+
+![9-2](./snapshots/9-2.png)
+
+![10](./snapshots/10.png)
+
+![11](./snapshots/11.png)
+
+![12](./snapshots/12.png)
+
+![13](./snapshots/13.png)
+
+![14](./snapshots/14.png)
+
+![15](./snapshots/15.png)
+
 ## Tech Stack
 
 - **Framework**: Next.js 16 with TypeScript
