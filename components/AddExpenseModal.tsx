@@ -180,11 +180,11 @@ export default function AddExpenseModal({ isOpen, onClose, groupId, members, onE
                             value={paidBy}
                             onChange={(e) => setPaidBy(e.target.value)}
                             required
-                            className="w-full px-4 py-3 bg-black/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all "
+                            className="w-full px-4 py-3 bg-black/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-black"
                         >
                             <option value="">Select member</option>
                             {members.map((member) => (
-                                <option className="text-black" key={member.id} value={member.id}>
+                                <option key={member.id} value={member.id}>
                                     {member.name}
                                 </option>
                             ))}
@@ -200,10 +200,10 @@ export default function AddExpenseModal({ isOpen, onClose, groupId, members, onE
                             id="category"
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
-                            className="w-full px-4 py-3 bg-black/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all "
+                            className="w-full px-4 py-3 bg-black/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-black"
                         >
                             {DEFAULT_CATEGORIES.map((cat) => (
-                                <option className='text-black' key={cat.id} value={cat.id}>
+                                <option key={cat.id} value={cat.id}>
                                     {cat.name}
                                 </option>
                             ))}
